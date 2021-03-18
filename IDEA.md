@@ -1,6 +1,10 @@
-# Ashutosh Kumar
+## Header
 
-### Languages and Tools
+# Home
+
+# About
+
+# Tools
 
 <p>
 <img src="Public/Icons/html.svg" alt="html" height="36px"/>
@@ -19,5 +23,19 @@
 <img src="Public/Icons/json.svg" alt="json" height="36px"/>
 <img src="Public/Icons/vercel.svg" alt="vercel" height="36px"/>
 </p>
-<img src="https://github-readme-stats.vercel.app/api?username=typedashutosh&count_private=true&show_icons=true&hide_border=false&include_all_commits=true&custom_title=Github%20%stats" width="360"><br>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=typedashutosh&langs_count=10&layout=compact&theme=default" width="360">
+
+# Project
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
+
+# Contact
+
+<hr>
+
+Help Improve this website, Create a [new Issue](https://github.com/typedashutosh/typedashutosh.github.io/issues/new)
+
+Social links GitHub, LinkedIn.
+
+Created with :heart: and <img src=./Public/Icons/nextjs.svg height=36px style="background:white; margin-bottom:-14px" />
