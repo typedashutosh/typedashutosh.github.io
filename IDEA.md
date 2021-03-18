@@ -39,3 +39,5 @@ Help Improve this website, Create a [new Issue](https://github.com/typedashutosh
 Social links GitHub, LinkedIn.
 
 Created with :heart: and <img src=./Public/Icons/nextjs.svg height=36px style="background:white; margin-bottom:-14px" />
+
+---
