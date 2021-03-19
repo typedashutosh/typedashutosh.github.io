@@ -32,7 +32,6 @@
 
 # Contact
 
-<hr>
 
 Help Improve this website, Create a [new Issue](https://github.com/typedashutosh/typedashutosh.github.io/issues/new)
 
