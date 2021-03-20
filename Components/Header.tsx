@@ -13,12 +13,15 @@ const Header: FC<THeader> = (): JSX.Element => {
     <div>
       <AppBar position='static'>
         <Toolbar>
-          <IconButton edge='start' className='' color='inherit' aria-label='menu'>
+          <IconButton
+            edge='start'
+            className=''
+            color='inherit'
+            aria-label='menu'
+          >
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' className='mr-auto'>
-            typedashutosh
-          </Typography>
+          <Typography variant='h6'>typedashutosh</Typography>
           <Link href='#'>
             <Button color='inherit' style={{ marginLeft: 'auto' }}>
               Home

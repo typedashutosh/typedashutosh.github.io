@@ -2,7 +2,7 @@
 
 ### Languages and Tools
 
-<p>
+<div>
 <img src="Public/Icons/html.svg" alt="html" height="36px"/>
 <img src="Public/Icons/css.svg" alt="css" height="36px"/>
 <img src="Public/Icons/sass.svg" alt="sass" height="36px"/>
@@ -18,6 +18,6 @@
 <img src="Public/Icons/redux-store.svg" alt="redux-store" height="36px"/>
 <img src="Public/Icons/json.svg" alt="json" height="36px"/>
 <img src="Public/Icons/vercel.svg" alt="vercel" height="36px"/>
-</p>
-<img src="https://github-readme-stats.vercel.app/api?username=typedashutosh&count_private=true&show_icons=true&hide_border=false&include_all_commits=true&custom_title=Github%20%stats" width="360"><br>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=typedashutosh&langs_count=10&layout=compact&theme=default" width="360">
+</div>
+<div><img src="https://github-readme-stats.vercel.app/api?username=typedashutosh&count_private=true&show_icons=true&hide_border=false&include_all_commits=true&custom_title=Github%20%stats" width="360"></div>
+<div><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=typedashutosh&langs_count=10&layout=compact&theme=default" width="360"></div>

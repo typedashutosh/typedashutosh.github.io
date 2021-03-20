@@ -5,12 +5,14 @@ type Tindex = {}
 
 const index: FC<Tindex> = (): JSX.Element => {
   return (
-    <Link
-      NextLinkProps={{ href: '/' }}
-      MaterialLinkProps={{ component: 'h1', variant: 'h5' }}
-    >
-      Link demo
-    </Link>
+    <>
+      <Link
+        NextLinkProps={{ href: '/' }}
+        MaterialLinkProps={{ component: 'h1', variant: 'h5' }}
+      >
+        Link demo
+      </Link>
+    </>
   )
 }
 

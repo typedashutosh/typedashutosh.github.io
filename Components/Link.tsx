@@ -8,13 +8,21 @@ type TLink = {
   NextLinkProps: NextLinkProps
   MaterialLinkProps: MaterialLinkProps & { component: ElementType }
   children: ReactNode
+  className?: string
 }
 
-const Link: FC<TLink> = ({ NextLinkProps, MaterialLinkProps, children }) => {
+const Link: FC<TLink> = ({
+  className,
+  NextLinkProps,
+  MaterialLinkProps,
+  children
+}) => {
   return (
-    <NextLink {...NextLinkProps}>
-      <MaterialLink {...MaterialLinkProps}>{children}</MaterialLink>
-    </NextLink>
+    <div className={className}>
+      <NextLink {...NextLinkProps}>
+        <MaterialLink {...MaterialLinkProps}>{children}</MaterialLink>
+      </NextLink>
+    </div>
   )
 }
 
