@@ -7,35 +7,10 @@
   a
     color: inherit
     text-decoration: none
-
+html
+  scroll-behavior: smooth
 body
   background-color: #002233
-  div.background
-    display: block
-    position: fixed
-    z-index: 1
-    div.main
-      div.left
-        position: fixed
-        z-index: 1
-        background-image: url('../../assets/blob-left.svg')
-        background-origin: bottom left
-        background-size: cover
-        height: 60vh
-        width: 60vh
-        bottom: 0
-        left: 0
-      div.right
-        position: fixed
-        z-index: 1
-        background-image: url('../../assets/blob-right.svg')
-        background-origin: top right
-        background-size: cover
-        height: 60vh
-        width: 60vh
-        top: 0
-        right: 0
-
   main
     z-index: 10
     display: block
@@ -43,6 +18,8 @@ body
     header
       display: flex
       position: sticky
+      height: 50px
+      margin-bottom: -50px
       top: 0
       left: 0
       padding: 10px 5% 5px
@@ -68,14 +45,46 @@ body
             cursor: pointer
             border-bottom-color: #f3f3f3
     section
-      height: 100vh
       padding: 0 5%
+      border: 1px solid red
+      overflow: hidden
     section.section-1
+      // display: none
       position: relative
+      height: 100vh
+      div.background
+        display: block
+        position: absolute
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+        z-index: -1
+        div.main
+          div.left
+            position: absolute
+            z-index: 1
+            background-image: url('../../assets/blob-left.svg')
+            background-origin: bottom left
+            background-size: cover
+            height: 60vh
+            width: 60vh
+            bottom: 0
+            left: 0
+          div.right
+            position: absolute
+            z-index: 1
+            background-image: url('../../assets/blob-right.svg')
+            background-origin: top right
+            background-size: cover
+            height: 60vh
+            width: 60vh
+            top: 0
+            right: 0
       div.sect-1
         position: absolute
-        top: 30%
-        transform: translateY(-30%)
+        top: 40%
+        transform: translateY(-40%)
         div.title
           border: 1px solid transparent
           border-left-color: #f3f3f3
@@ -117,10 +126,150 @@ body
             &:hover
               color: #002233
               background: #f3f3f3
-
       div.stats
-        display: none
         position: absolute
-        top: 30%
+        top: 40%
         right: 5%
-        transform: translateY(-30%)
+        transform: translateY(-40%)
+    section.section-2
+      height: 100vh
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      div.background
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 1
+        height: 100%
+        width: 100%
+        div.bubbles
+          position: absolute
+          border-radius: 50%
+          width: 10vw
+          height: 10vw
+          background: #0066ff
+          z-index: -2
+        div.skewed-path
+          position: absolute
+          height: 45vh
+          width: 100%
+          background: #003865bb
+          transform: skewY(-11.25deg) translateY(-50%)
+          z-index: -1
+          top: 50%
+      span.title
+        display: block
+        color: #f3f3f3
+        font-size: 2rem
+        z-index: 0
+        margin-bottom: 10px
+      div.sect-1
+        z-index: 0
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        span.image
+          flex: 1
+          height: 300px
+          width: 200px
+          background: lightgray
+          margin-right: 10px
+        span.text
+          flex: 3
+          margin-left: 4%
+          width: 100%
+          text-align: justify
+    section.section-3
+      height: 100vh
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      span.title
+        display: block
+        color: #f3f3f3
+        font-size: 2rem
+        z-index: 0
+        margin-bottom: 10px
+      div.sect-1
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        grid-row-gap: 4%
+        grid-column-gap: 4%
+        grid-gap: 50px
+        div.tool
+          height: 20vh
+          width: 20vw
+          padding: 2%
+          display: flex
+          align-items: center
+          justify-content: center
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          position: relative
+          overflow: clip
+          transition: all 0.25s
+
+          span
+            color: #f3f3f300
+            z-index: 1
+            transition: all 0.25s
+          &:hover
+            span
+              color: #f3f3f3
+          &:hover::before
+            background-color: #000000cc
+          &::before
+            content: ""
+            background-color: #ffffff00
+            height: 102%
+            width: 102%
+            left: -1%
+            position: absolute
+            transition: all 0.25s
+
+        div.tool-1, div.tool-5
+          background-color: white
+        div.tool-4
+          display: grid
+          grid-template-columns: 1fr 1fr
+          grid-template-rows: 1fr 1fr
+          // grid-gap: 50px
+          div.sub-tool
+            height: 100%
+            width: 100%
+            padding: 2%
+            display: flex
+            align-items: center
+            justify-content: center
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+            position: relative
+            overflow: clip
+            transition: all 0.25s
+            span
+              color: #f3f3f300
+              z-index: 1
+              transition: all 0.25s
+            &:hover
+              span
+                color: #f3f3f3
+            &:hover::before
+              background-color: #000000cc
+            &::before
+              content: ""
+              background-color: #ffffff00
+              height: 102%
+              width: 102%
+              left: -1%
+              position: absolute
+              transition: all 0.25s
