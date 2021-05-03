@@ -1,5 +1,6 @@
 import { FC, ReactElement } from 'react'
 import Header from '../components/Header'
+import Tool_card from '../components/Tool_card'
 
 interface Iindex {}
 
@@ -62,15 +63,21 @@ const index: FC<Iindex> = (): ReactElement => {
 			<section className='section-3 tools'>
 				<span className='title'>tools</span>
 				<div className='sect-1'>
-					<div>HTML</div>
-					<div>CSS</div>
-					<div>SASS</div>
-					<div>JS</div>
-					<div>TS</div>
-					<div>NEXTJS</div>
-					<div>MATERIALUI</div>
-					<div>TAILWIND</div>
-					<div>FIGMA</div>
+					<Tool_card
+						img_url='/assets/icons/nextjs.svg'
+						title='NEXT.JS'
+						desc={`It's a wonderful technology made on top of React.js which can be use to produce Single Page Application, Static Site Generation and Server Side Rendering.`}
+					/>
+					<Tool_card
+						img_url='/assets/icons/typescript.svg'
+						title='Typescript'
+						desc={`Typescript is a strict syntactical superset of JavaScript and adds optional static typing to the language. I use this to transcompile down to ES5 standard Javascript for more support `}
+					/>
+					<Tool_card
+						img_url='/assets/icons/material-ui.svg'
+						title='Material-UI'
+						desc={`Material-UI is a simple and customizable component library to build faster, beautiful, and more accessible React applications. `}
+					/>
 				</div>
 			</section>
 			<section className='section-4 projects'>
