@@ -5,7 +5,7 @@ interface Iindex {}
 
 const index: FC<Iindex> = (): ReactElement => {
 	return (
-		<div>
+		<main>
 			<section className='section-1 home'>
 				<div className='background'>
 					<div className='main'>
@@ -51,11 +51,11 @@ const index: FC<Iindex> = (): ReactElement => {
 				<div className='sect-1'>
 					<span className='image'></span>
 					<span className='text'>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt repellat tenetur modi
-						saepe, beatae amet ea ratione totam, libero harum iusto perspiciatis veritatis incidunt
-						reprehenderit dolores sed nesciunt in molestiae natus sint accusamus corporis ad. Hic a
-						nemo aut consequatur neque architecto dolorum. Placeat eos deserunt illum tenetur
-						tempora! Ratione.
+						Hi, I'm Ashutosh kumar, a self-taught web-developer from UP, IN. I use of modern web
+						technologies to build websites that looks great, feel responsive, work fast and are
+						secure. <br />I use Nextjs to generate static sites and serverside rendered pages, which
+						are lightning fast and SEO friendly, Material-UI to make Google standard UI, which every
+						one loves.
 					</span>
 				</div>
 			</section>
@@ -74,14 +74,13 @@ const index: FC<Iindex> = (): ReactElement => {
 				</div>
 			</section>
 			<section className='section-4 projects'>
-        <div className="sect-1 projects"></div>
-        <div className="sect2 designs"></div>
-      </section>
+				<div className='sect-1 projects'></div>
+				<div className='sect2 designs'></div>
+			</section>
 			<section className='section-5 contact'>
-        {/* form faesojhlakjfjkalklajakjfjkakajfkfljka*/}
-
-      </section>
-		</div>
+				{/* form faesojhlakjfjkalklajakjfjkakajfkfljka*/}
+			</section>
+		</main>
 	)
 }
 
