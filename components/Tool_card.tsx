@@ -1,17 +1,19 @@
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, useEffect } from 'react'
 import Image from 'next/image'
-import $ from  '../styles/Tool_card.module.sass'
 
 interface ITool_card {
+	classname:string
 	img_url: string
 	title: string
 	desc: string
 }
 
-const Tool_card: FC<ITool_card> = ({ img_url, title, desc }): ReactElement => {
+const Tool_card: FC<ITool_card> = ({ classname, img_url, title, desc }): ReactElement => {
 	return (
-		<div className={$.card}>
-			<Image src={img_url} height={128} width={128} />
+		<div id='card'>
+			<div className={`img ${classname}`}>
+				<Image className='logo' src={img_url} height={128} width={128} />
+			</div>
 			<span className={`card-title ${title}`}>{title}</span>
 			<div className='desc'>{desc}</div>
 		</div>
