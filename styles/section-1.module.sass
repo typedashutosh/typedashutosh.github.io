@@ -13,9 +13,6 @@ section.section-1
       div.left
         position: absolute
         z-index: 1
-        background-image: url('../public/assets/blob-left.svg')
-        background-origin: bottom left
-        background-size: cover
         height: 60vh
         width: 60vh
         bottom: 0
@@ -23,9 +20,6 @@ section.section-1
       div.right
         position: absolute
         z-index: 1
-        background-image: url('../public/assets/blob-right.svg')
-        background-origin: top right
-        background-size: cover
         height: 60vh
         width: 60vh
         top: 0
@@ -50,6 +44,7 @@ section.section-1
         opacity: 0
         background: linear-gradient(90deg, rgba(243,243,243,0.25) 0%, rgba(144,143,158,0.125) 55%, rgba(243,243,243,0) 100%)
         -webkit-backdrop-filter: blur(4px)
+        backdrop-filter: blur(4px)
         transition: all 0.25s
       &:hover
         backdrop-filter: blur(4px)

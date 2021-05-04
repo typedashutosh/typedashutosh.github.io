@@ -9,8 +9,8 @@ const index: FC<Iindex> = (): ReactElement => {
 		const bubble_fn = () => {
 			const bubbles = document.querySelectorAll(
 				`.section-2 .background .bubble`
-				) as NodeListOf<HTMLDivElement>
-				
+			) as NodeListOf<HTMLDivElement>
+
 			bubbles.forEach(bubble => {
 				const random_dimension = Math.random() * 10 + 6
 
@@ -28,8 +28,22 @@ const index: FC<Iindex> = (): ReactElement => {
 			<section className='section-1 home'>
 				<div className='background'>
 					<div className='main'>
-						<div className='svg-main left'></div>
-						<div className='svg-main right'></div>
+						<div
+							style={{
+								background: `url('/assets/blob-left.svg')`,
+								backgroundOrigin: 'bottom left',
+								backgroundSize: 'cover',
+							}}
+							className='svg-main left'
+						></div>
+						<div
+							style={{
+								background: `url('/assets/blob-right.svg')`,
+								backgroundOrigin: ' top right',
+								backgroundSize: 'cover',
+							}}
+							className='svg-main right'
+						></div>
 					</div>
 				</div>
 				<div className='sect-1'>
