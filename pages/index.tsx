@@ -1,9 +1,28 @@
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, useEffect } from 'react'
 import Header from '../components/Header'
+import Tool_card from '../components/Tool_card'
 
 interface Iindex {}
 
 const index: FC<Iindex> = (): ReactElement => {
+	useEffect(() => {
+		const bubble_fn = () => {
+			const bubbles = document.querySelectorAll(
+				`.section-2 .background .bubble`
+				) as NodeListOf<HTMLDivElement>
+				
+			bubbles.forEach(bubble => {
+				const random_dimension = Math.random() * 10 + 6
+
+				bubble.style.height = `${random_dimension}vw`
+				bubble.style.width = `${random_dimension}vw`
+				bubble.style.opacity = `${Math.random() / 2 + 0.25}`
+				bubble.style.top = `${Math.random() * 100}%`
+				bubble.style.left = `${Math.random() * 100}%`
+			})
+		}
+		bubble_fn()
+	}, [])
 	return (
 		<main>
 			<section className='section-1 home'>
@@ -38,13 +57,13 @@ const index: FC<Iindex> = (): ReactElement => {
 			</section>
 			<section className='section-2 about'>
 				<div className='background'>
-					<div className='bubbles'></div>
-					<div className='bubbles'></div>
-					<div className='bubbles'></div>
-					<div className='bubbles'></div>
-					<div className='bubbles'></div>
-					<div className='bubbles'></div>
-					<div className='bubbles'></div>
+					<div className='bubble'></div>
+					<div className='bubble'></div>
+					<div className='bubble'></div>
+					<div className='bubble'></div>
+					<div className='bubble'></div>
+					<div className='bubble'></div>
+					<div className='bubble'></div>
 					<div className='skewed-path'></div>
 				</div>
 				<span className='title'>about</span>
@@ -54,23 +73,33 @@ const index: FC<Iindex> = (): ReactElement => {
 						Hi, I'm Ashutosh kumar, a self-taught web-developer from UP, IN. I use of modern web
 						technologies to build websites that looks great, feel responsive, work fast and are
 						secure. <br />I use Nextjs to generate static sites and serverside rendered pages, which
-						are lightning fast and SEO friendly, Material-UI to make Google standard UI, which every
-						one loves.
+						are lightning fast and SEO friendly, Material-UI to make standard UI, which every one
+						loves.
 					</span>
 				</div>
 			</section>
 			<section className='section-3 tools'>
+				<div className='background'></div>
 				<span className='title'>tools</span>
 				<div className='sect-1'>
-					<div>HTML</div>
-					<div>CSS</div>
-					<div>SASS</div>
-					<div>JS</div>
-					<div>TS</div>
-					<div>NEXTJS</div>
-					<div>MATERIALUI</div>
-					<div>TAILWIND</div>
-					<div>FIGMA</div>
+					<Tool_card
+						classname='njs'
+						img_url='/assets/icons/nextjs.svg'
+						title='NEXT.JS'
+						desc={`It's a wonderful technology made on top of React.js which can be use to produce SPA, SSG and SSR.`}
+					/>
+					<Tool_card
+						classname='ts'
+						img_url='/assets/icons/typescript.svg'
+						title='Typescript'
+						desc={`Typescript is a strict syntactical superset of JavaScript and adds optional static typing to the language. `}
+					/>
+					<Tool_card
+						classname='mui'
+						img_url='/assets/icons/material-ui.svg'
+						title='Material-UI'
+						desc={`Material-UI provides React components for faster and easier web development. `}
+					/>
 				</div>
 			</section>
 			<section className='section-4 projects'>
