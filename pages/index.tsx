@@ -93,7 +93,9 @@ const index: FC<Iindex> = (): ReactElement => {
 				</div>
 			</section>
 			<section className='section-3 tools'>
-				<div className='background'></div>
+				<div className='background'>
+					{/* background similer to anurag hazra's background where many tech names were displayed */}
+				</div>
 				<span className='title'>tools</span>
 				<div className='sect-1'>
 					<Tool_card
@@ -117,12 +119,15 @@ const index: FC<Iindex> = (): ReactElement => {
 				</div>
 			</section>
 			<section className='section-4 projects'>
-				<div className='sect-1 projects'></div>
+				<div className='background'>
+
+				</div>
+				<div className='sect-1 projects'>
+					
+				</div>
 				<div className='sect2 designs'></div>
 			</section>
-			<section className='section-5 contact'>
-				{/* form faesojhlakjfjkalklajakjfjkakajfkfljka*/}
-			</section>
+			<section className='section-5 contact'></section>
 		</main>
 	)
 }
