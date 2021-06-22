@@ -1,4 +1,4 @@
-import '../styles/global.sass'
+import '../sass/global.sass'
 import { AppProps } from 'next/app'
 import { FC, ReactElement } from 'react'
 import Layout from '../components/Layout'

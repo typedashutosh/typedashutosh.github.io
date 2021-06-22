@@ -1,11 +1,14 @@
-import { FC, ReactElement, useEffect } from 'react'
+import React, { FC, ReactElement } from 'react'
+import Skills from '../components/Skills'
 
 interface Iindex {}
 
-const Index: FC<Iindex> = (): ReactElement => {
+const index: FC<Iindex> = (): ReactElement => {
 	return (
-		<main></main>
+		<main>
+			<Skills />
+		</main>
 	)
 }
 
-export default Index
+export default index

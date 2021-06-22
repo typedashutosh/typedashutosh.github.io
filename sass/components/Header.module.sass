@@ -1,0 +1,85 @@
+@import ../variables
+
+.header
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 1rem 5%
+  .title
+    font-size: 1.5rem
+  .menu_btn
+    position: relative
+    height: fit-content
+    width: 100px
+    zoom: 0.4
+    display: flex
+    flex-direction: column
+    align-items: center
+    cursor: pointer
+    justify-content: center
+    .slice
+      pointer-events: none
+      height: 15px
+      border-radius: 15px
+      width: 100px
+      background: linear-gradient(to right, $color1 0%, $color1 60%, transparent 100%)
+      background-size: 200% 100%
+      transform-origin: center center
+      background-position: left center
+      transition: $transition25
+      &:nth-child(2)
+        pointer-events: none
+        margin: 10px 0
+        height: 15px
+        border-radius: 15px
+        width: 100px
+        background: $color1
+        transform-origin: center center
+        transition: $transition25
+      &:nth-child(3)
+        pointer-events: none
+        height: 15px
+        border-radius: 15px
+        width: 100px
+        background: linear-gradient(to right, transparent 0%, $color1 40%, $color1 100%)
+        background-size: 200% 100%
+        transform-origin: center center
+        background-position: right center
+        transition: $transition25
+    &:hover
+      .slice
+        background-position: right center
+        &:nth-child(2)
+        &:nth-child(3)
+          background-position: left center
+  .menu_open
+    .slice
+      color: red
+      transform: translateX(0px) translateY(25px) rotateZ(45deg)
+      &:nth-child(2)
+        transform: translateX(0px) translateY(0px) rotateZ(-45deg)
+      &:nth-child(3)
+        transform: translateX(-0px) translateY(-25px) rotateZ(45deg)
+
+  .nav
+    position: absolute
+    right: 0
+    padding: 0.5rem 1rem 0.5rem 0.25rem
+    top: 4.5rem
+    opacity: 0
+    transform: translateX(100%)
+    display: flex
+    flex-direction: column
+    transition: $transition25
+    background: #b3cbff
+    a
+      margin: 0.25rem 1rem 0.25rem 0.5rem
+      padding: 0.5rem 1rem 0.5rem 0.5rem
+      transition: $transition25
+      border: 2px solid transparent
+      &:hover
+        border-bottom-color: #52557e
+    &.nav_open
+      opacity: 1
+      transform: translateX(0%)
