@@ -4,8 +4,11 @@
   position: relative
   display: flex
   align-items: center
+  background: $color3
+  height: 4.5rem
   justify-content: space-between
   padding: 1rem 5%
+  box-shadow: 0 2px 4px $color3
   .title
     font-size: 1.5rem
   .menu_btn
@@ -50,7 +53,6 @@
     &:hover
       .slice
         background-position: right center
-        &:nth-child(2)
         &:nth-child(3)
           background-position: left center
   .menu_open
@@ -72,14 +74,16 @@
     display: flex
     flex-direction: column
     transition: $transition25
-    background: #b3cbff
-    a
+    box-shadow: -2px 2px 4px $color3
+    background: rgba($color3,.5)
+    div
+      cursor: pointer
       margin: 0.25rem 1rem 0.25rem 0.5rem
       padding: 0.5rem 1rem 0.5rem 0.5rem
       transition: $transition25
       border: 2px solid transparent
       &:hover
-        border-bottom-color: #52557e
+        border-bottom-color: $color1
     &.nav_open
       opacity: 1
       transform: translateX(0%)

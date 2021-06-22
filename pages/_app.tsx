@@ -1,6 +1,6 @@
 import '../sass/global.sass'
 import { AppProps } from 'next/app'
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, useEffect } from 'react'
 import Layout from '../components/Layout'
 
 interface I_app extends AppProps {}
