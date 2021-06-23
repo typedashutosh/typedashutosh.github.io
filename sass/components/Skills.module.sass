@@ -2,19 +2,28 @@
 section.Skill_section
   display: grid
   place-items: center
+  background: url('../../public/Markups/Backgrounds/light-mode-footer-background.svg')
+  background-repeat: no-repeat
+  background-size: 100%
+  background-position: bottom
   min-height: 100vh
   .Skills
     display: grid
-    height: 60vh
     grid-template-columns: 2fr 2fr 2fr
     grid-template-rows: 0.1fr 2fr
-    gap: 0px 0px
     grid-template-areas: "taskbar taskbar taskbar" "sidebar screen screen"
+    height: 60vh
+    gap: 0px 0px
+    border-radius: 6px
+    overflow: hidden
+    box-shadow: 0 2px 6px $color3
+    background: linear-gradient(135deg, rgba(#5ea4ff,0.5), rgba(#ff66bf,0.5))
+    backdrop-filter: blur(10px)
     .heading
       padding: 0.25rem 0.5rem
       grid-area: taskbar
-      border: 1px solid black
       display: flex
+      box-shadow: 0 1px 2px $color3
       align-items: center
       .dot_1, .dot_2, .dot_3
         height: 0.75rem
@@ -23,11 +32,11 @@ section.Skill_section
         border-radius: 6px
         display: inline
       .dot_1
-        background: red
+        background: $red
       .dot_2
-        background: yellow
+        background: $yellow
       .dot_3
-        background: green
+        background: $green
       .title
         flex: 1
         text-align: center
@@ -36,20 +45,28 @@ section.Skill_section
       grid-area: sidebar
       display: flex
       flex-direction: column
-
-      border: 1px solid green
+      box-shadow: 1px 2px 2px $color3
+      // border: 1px solid green
       *
         cursor: pointer
       .title
+        cursor: default
+        padding: 0.25rem 0.5rem
+        margin: 1rem
+        font-size: $font-sm
+
       label.formField
         display: flex
         align-items: baseline
         padding: 0.5rem 1rem 0.5rem 0.25rem
-        font-size: 1.125rem
-        border: 2px solid transparent
-        transition: $transition25
+        font-size: 1rem
+        width: 100%
+        background: linear-gradient(90deg, rgba(#ffa4dc, 0.75) 0%, rgba(#a0f5ee, 0.1) 50%, rgba(#a4b9ff, 0.25) 100%)
+        background-size: 300%
+        background-position: 100%
+        transition: $transition5
         &:hover
-          border-bottom-color: $color3
+          background-position: 0%
         input
           padding: 0 0.125rem
         div
@@ -59,4 +76,79 @@ section.Skill_section
           padding: 0 0 0 0.5rem
     .screen
       grid-area: screen
-      border: 1px solid blue
+      display: flex
+      // flex-direction: column
+      // align-items: center
+      justify-content: space-evenly
+      .card
+        height: 180px
+        width: 90%
+        margin-top: 1rem
+        padding: 0.5rem
+
+        border-radius: 4px
+        background: rgba(#1bc5f8, 0.35)
+        display: grid
+        grid-template: 'avatar title''avatar heading''paragraph paragraph'
+        grid-template-columns: 1fr 3fr
+        grid-template-rows: .5fr .5fr 2fr
+        transition: $transition3
+        .avatar_skeleton
+          place-self: center
+          border-radius: 50%
+          height: 3rem
+          width: 3rem
+          background: linear-gradient(90deg, rgba($grey, 0.5) 0%,rgba($grey, 0.5) 30%, rgba($grey, 1) 50%,rgba($grey, 0.5) 70%, rgba($grey, 0.5) 100%)
+          background-size: 300%
+          background-position: left center
+          grid-area: avatar
+          animation-name: loading-skeleton
+          animation-duration: 2s
+          animation-timing-function: linear
+          animation-iteration-count: infinite
+        .title_skeleton
+          place-self: center start
+          height: 1rem
+          width: 5rem
+          background: linear-gradient(90deg, rgba($grey, 0.5) 0%,rgba($grey, 0.5) 30%, rgba($grey, 1) 50%,rgba($grey, 0.5) 70%, rgba($grey, 0.5) 100%)
+          background-size: 300%
+          background-position: left center
+          grid-area: title
+          animation-name: loading-skeleton
+          animation-duration: 2s
+          animation-timing-function: linear
+          animation-iteration-count: infinite
+        .heading_skeleton
+          place-self: center start
+          height: 1.25rem
+          width: 90%
+          background: linear-gradient(90deg, rgba($grey, 0.5) 0%,rgba($grey, 0.5) 30%, rgba($grey, 1) 50%,rgba($grey, 0.5) 70%, rgba($grey, 0.5) 100%)
+          background-size: 300%
+          background-position: left center
+          grid-area: heading
+          animation-name: loading-skeleton
+          animation-duration: 2s
+          animation-timing-function: linear
+          animation-iteration-count: infinite
+        .paragraph_skeleton
+          place-self: center
+          height: 80%
+          width: 90%
+          background: linear-gradient(90deg, rgba($grey, 0.5) 0%,rgba($grey, 0.5) 30%, rgba($grey, 1) 50%,rgba($grey, 0.5) 70%, rgba($grey, 0.5) 100%)
+          background-size: 300%
+          background-position: left center
+          grid-area: paragraph
+          animation-name: loading-skeleton
+          animation-duration: 2s
+          animation-timing-function: linear
+          animation-iteration-count: infinite
+        &:hover
+          box-shadow: 0 2px 4px rgba(#16404e, 0.25)
+          transform: translateY(-4px)
+@keyframes loading-skeleton
+  0%
+    background-position: 100%
+  50%
+    background-position: 50%
+  100%
+    background-position: 0%

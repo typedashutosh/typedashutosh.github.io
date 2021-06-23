@@ -10,7 +10,7 @@ const Skills: FC<ISkills> = (): ReactElement => {
 	const [grdntBrdr, setGrdntBrdr] = useState([false, false])
 	const [grdentBckgrnd, setGrdentBckgrnd] = useState([false, false])
 	const [loader, setLoader] = useState([false, false])
-  
+
 	return (
 		<section className={`${$.Skill_section}`}>
 			<div className={`${$.Skills}`}>
@@ -21,7 +21,7 @@ const Skills: FC<ISkills> = (): ReactElement => {
 					<div className={`${$.title}`}>My Skills</div>
 				</div>
 				<div className={`${$.skills_checks}`}>
-					<div className={`${$.title}`}>Skills</div>
+					<div className={`${$.title}`}>Skills checklist</div>
 					<label htmlFor='CSS' className={`${$.formField}`}>
 						<input type='checkbox' name='CSS' id='CSS' />
 						<div>CSS</div>
@@ -51,7 +51,14 @@ const Skills: FC<ISkills> = (): ReactElement => {
 						<div>Loader</div>
 					</label>
 				</div>
-				<div className={`${$.screen}`}></div>
+				<div className={`${$.screen}`}>
+					<div className={`${$.card}`}>
+						<div className={`${$.avatar_skeleton}`}></div>
+						<div className={`${$.title_skeleton}`}></div>
+						<div className={`${$.heading_skeleton}`}></div>
+						<div className={`${$.paragraph_skeleton}`}></div>
+					</div>
+				</div>
 			</div>
 		</section>
 	)
