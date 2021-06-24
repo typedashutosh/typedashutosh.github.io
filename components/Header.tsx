@@ -1,18 +1,49 @@
-import { FC, ReactElement } from 'react'
-
+import { FC, ReactElement, useEffect, useState } from 'react'
+import Link from 'next/link'
+import $ from '../sass/components/Header.module.sass'
+import { isClient } from '../libs/stateCheck'
 interface IHeader {}
 
 const Header: FC<IHeader> = (): ReactElement => {
+	const [menuOpen, setMenuOpen] = useState(false)
+	if (isClient()) {
+		onclick = e => {
+			;(e.target as Element).classList.contains(`mouse-click-ignore`)
+				? null
+				: menuOpen
+				? setMenuOpen(!menuOpen)
+				: null
+		}
+	} else null
 	return (
-		<header>
-			<span className='logo-text'>typedashutosh</span>
-			<nav>
-				<a className=' nav nav-1'>home</a>
-				<a className=' nav nav-2'>about</a>
-				<a className=' nav nav-3'>tools</a>
-				<a className=' nav nav-4'>projects</a>
-				<a className=' nav nav-5'>contact me</a>
-				<a className='theme-switch'></a>
+		<header className={`${$.header}`}>
+			<div className={`${$.title}`}>typedashutosh</div>
+			<div
+				className={`${$.menu_btn} ${menuOpen ? $.menu_open : ''} mouse-click-ignore`}
+				onClick={() => {
+					setMenuOpen(!menuOpen)
+				}}
+			>
+				<div className={`${$.slice} mouse-click-ignore`}></div>
+				<div className={`${$.slice} mouse-click-ignore`}></div>
+				<div className={`${$.slice} mouse-click-ignore`}></div>
+			</div>
+			<nav className={`${$.nav} ${menuOpen ? $.nav_open : ''} mouse-click-ignore`}>
+				<Link href='#'>
+					<div className='mouse-click-ignore'>Home</div>
+				</Link>
+				<Link href='#'>
+					<div className='mouse-click-ignore'>About me</div>
+				</Link>
+				<Link href='#'>
+					<div className='mouse-click-ignore'>Skills</div>
+				</Link>
+				<Link href='#'>
+					<div className='mouse-click-ignore'>projects</div>
+				</Link>
+				<Link href='#'>
+					<div className='mouse-click-ignore'>Contact</div>
+				</Link>
 			</nav>
 		</header>
 	)

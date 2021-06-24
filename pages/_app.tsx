@@ -1,11 +1,7 @@
-import '../styles/global.sass'
-
+import '../sass/global.sass'
 import { AppProps } from 'next/app'
-import { FC, ReactElement } from 'react'
-
+import { FC, ReactElement, useEffect } from 'react'
 import Layout from '../components/Layout'
-import dynamic from 'next/dynamic'
-// const DynamicComponentWithNoSSR = dynamic(() => import('../scripts/main.js'), { ssr: false })
 
 interface I_app extends AppProps {}
 
