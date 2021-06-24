@@ -1,4 +1,5 @@
 @import ../variables
+
 section.Skill_section
   display: grid
   place-items: center
@@ -9,6 +10,7 @@ section.Skill_section
   min-height: 100vh
   .Skills
     display: grid
+    position: relative
     grid-template-columns: 2fr 2fr 2fr
     grid-template-rows: 0.1fr 2fr
     grid-template-areas: "taskbar taskbar taskbar" "sidebar screen screen"
@@ -17,8 +19,19 @@ section.Skill_section
     border-radius: 6px
     overflow: hidden
     box-shadow: 0 2px 6px $color3
-    background: linear-gradient(135deg, rgba(#5ea4ff,0.5), rgba(#ff66bf,0.5))
+    background: linear-gradient(135deg, rgba(#5ea4ff, 0.75 ) 0%,rgba(#5ea4ff,0.5) 10%, rgba(#ff66bf,0.5) 100%)
     backdrop-filter: blur(5px)
+    &::before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(135deg, #5ea4ff ,#5ea4ff, #ff66bf)
+      z-index: -1
+      opacity: 0
+      transition: $transition3
     .heading
       padding: 0.25rem 0.5rem
       grid-area: taskbar
@@ -30,6 +43,7 @@ section.Skill_section
         width: 0.75rem
         margin: 0.125rem
         border-radius: 6px
+        box-shadow: 0 0 2px rgba(#5ea4ff, 1)
         display: inline
       .dot_1
         background: $red
@@ -46,7 +60,6 @@ section.Skill_section
       display: flex
       flex-direction: column
       box-shadow: 1px 2px 2px $color3
-      // border: 1px solid green
       *
         cursor: pointer
       .title
@@ -62,13 +75,14 @@ section.Skill_section
         padding: 0
         margin: 3px 0
         font-size: 1rem
+        user-select: none
         width: 100%
         background: linear-gradient(90deg, rgba(#ffa4dc, 0.75) 0%, rgba(#a0f5ee, 0.1) 50%, rgba(#a4b9ff, 0.25) 100%)
         background-size: 300%
         background-position: 100%
         transition: $transition5
         &::before
-          background: linear-gradient(90deg, rgba(#80ffff, 0.5) 0%, rgba(#ff85d0, 0.5) 50%, rgba(#616cff, 0.5)100%)
+          background: linear-gradient(90deg, rgba(#80ffff, 0.75) 0%, rgba(#ff85d0, 0.75) 50%, rgba(#616cff, 0.75)100%)
           background-size: 200%
           background-position: left
           content: ''
@@ -82,7 +96,9 @@ section.Skill_section
           transform: translateY(3px)
           transition: $transition3
           z-index: -1
+          opacity: 0
         &:hover::before
+          opacity: 1
           background-position: right
         &:hover
           background-position: 0%
@@ -99,13 +115,12 @@ section.Skill_section
       display: flex
       flex-direction: column
       align-items: center
-      justify-content: start
+      justify-content: flex-start
       .card
         height: 180px
         width: 90%
         margin-top: 1rem
         padding: 0.5rem
-
         border-radius: 4px
         background: rgba(#1bc5f8, 0.35)
         display: grid
@@ -129,7 +144,7 @@ section.Skill_section
         .title_skeleton
           place-self: center start
           height: 1rem
-          width: 5rem
+          width: 50%
           background: linear-gradient(90deg, rgba($grey, 0.5) 0%,rgba($grey, 0.5) 30%, rgba($grey, 1) 50%,rgba($grey, 0.5) 70%, rgba($grey, 0.5) 100%)
           background-size: 300%
           background-position: left center
@@ -208,3 +223,29 @@ section.Skill_section
     transform: rotateX(180deg) rotateY(0)
   100%
     transform: rotateX(0) rotateY(0)
+
+.normalise_loader
+  height: 0 !important
+  width: 0 !important
+  div
+    height: 0 !important
+    width: 0 !important
+.normalise_skeleton
+  height: 0 !important
+  margin: 0 !important
+  padding: 0 !important
+  *
+    height: 0 !important
+    margin: 0 !important
+    padding: 0 !important
+.normalise_glassmorphism
+  // background: linear-gradient(135deg, rgba(#5ea4ff, 1 ) 0%,rgba(#5ea4ff,1) 10%, rgba(#ff66bf,1) 100%) !important
+  &::before
+    opacity: 1 !important
+.normalise_grdntBrdr
+  label
+    &::before
+      opacity: 0 !important
+.normalise_grdntBckgrnd
+  label
+    background-position: right !important

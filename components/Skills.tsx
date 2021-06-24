@@ -4,38 +4,62 @@ import $ from '../sass/components/Skills.module.sass'
 interface ISkills {}
 
 const Skills: FC<ISkills> = (): ReactElement => {
-	const [css, setCss] = useState([false, false])
-	const [glassmorphism, setGlassmorphism] = useState([false, false])
-	const [skeleton, setskeleton] = useState([false, false])
-	const [grdntBrdr, setGrdntBrdr] = useState([false, false])
-	const [grdentBckgrnd, setGrdentBckgrnd] = useState([false, false])
-	const [loader, setLoader] = useState([false, false])
+	const [css, setCss] = useState(true)
+	const [glassmorphism, setGlassmorphism] = useState(true)
+	const [skeletonCard, setskeletonCard] = useState(true)
+	const [grdntBrdr, setGrdntBrdr] = useState(true)
+	const [grdntBckgrnd, setGrdntBckgrnd] = useState(true)
+	const [loader, setLoader] = useState(true)
 
 	return (
 		<section className={`${$.Skill_section}`}>
-			<div className={`${$.Skills}`}>
+			<div className={`${css ? $.Skills : ''} ${glassmorphism ? '' : $.normalise_glassmorphism}`}>
 				<div className={`${$.heading}`}>
 					<div className={`${$.dot_1}`}></div>
 					<div className={`${$.dot_2}`}></div>
 					<div className={`${$.dot_3}`}></div>
 					<div className={`${$.title}`}>My Skills</div>
 				</div>
-				<div className={`${$.skills_checks}`}>
+				<div className={`${$.skills_checks} ${grdntBrdr? '': $.normalise_grdntBrdr} ${grdntBckgrnd? '': $.normalise_grdntBckgrnd}`}>
 					<div className={`${$.title}`}>Skills checklist</div>
 					<label htmlFor='CSS' className={`${$.formField}`}>
-						<input type='checkbox' name='CSS' id='CSS' />
+						<input
+							type='checkbox'
+							name='CSS'
+							id='CSS'
+							checked={css}
+							onChange={e => setCss(e.target.checked)}
+						/>
 						<div>CSS</div>
 					</label>
 					<label htmlFor='glassmorphism' className={`${$.formField}`}>
-						<input type='checkbox' name='glassmorphism' id='glassmorphism' />
+						<input
+							type='checkbox'
+							name='glassmorphism'
+							id='glassmorphism'
+							checked={glassmorphism}
+							onChange={e => setGlassmorphism(e.target.checked)}
+						/>
 						<div>Glassmorphism</div>
 					</label>
-					<label htmlFor='skeleton' className={`${$.formField}`}>
-						<input type='checkbox' name='skeleton' id='skeleton' />
-						<div>Skeleton loading</div>
+					<label htmlFor='skeleton-card' className={`${$.formField}`}>
+						<input
+							type='checkbox'
+							name='skeleton-card'
+							id='skeleton-card'
+							checked={skeletonCard}
+							onChange={e => setskeletonCard(e.target.checked)}
+						/>
+						<div>Skeleton loading and Cards</div>
 					</label>
 					<label htmlFor='gradient-border' className={`${$.formField}`}>
-						<input type='checkbox' name='gradient-border' id='gradient-border' />
+						<input
+							type='checkbox'
+							name='gradient-border'
+							id='gradient-border'
+							checked={grdntBrdr}
+							onChange={e => setGrdntBrdr(e.target.checked)}
+						/>
 						<div>Gradient border</div>
 					</label>
 					<label htmlFor='gradient-background-transition' className={`${$.formField}`}>
@@ -43,28 +67,36 @@ const Skills: FC<ISkills> = (): ReactElement => {
 							type='checkbox'
 							name='gradient-background-transition'
 							id='gradient-background-transition'
+							checked={grdntBckgrnd}
+							onChange={e => setGrdntBckgrnd(e.target.checked)}
 						/>
 						<div>Gradient background transition</div>
 					</label>
 					<label htmlFor='loader' className={`${$.formField}`}>
-						<input type='checkbox' name='loader' id='loader' />
+						<input
+							type='checkbox'
+							name='loader'
+							id='loader'
+							checked={loader}
+							onChange={e => setLoader(e.target.checked)}
+						/>
 						<div>Loader</div>
 					</label>
 				</div>
 				<div className={`${$.screen}`}>
-					<div className={`${$.card}`}>
+					<div className={`${$.card} ${skeletonCard ? '' : $.normalise_skeleton}`}>
 						<div className={`${$.avatar_skeleton}`}></div>
 						<div className={`${$.title_skeleton}`}></div>
 						<div className={`${$.heading_skeleton}`}></div>
 						<div className={`${$.paragraph_skeleton}`}></div>
 					</div>
-					<div className={`${$.card}`}>
+					<div className={`${$.card} ${skeletonCard ? '' : $.normalise_skeleton}`}>
 						<div className={`${$.avatar_skeleton}`}></div>
 						<div className={`${$.title_skeleton}`}></div>
 						<div className={`${$.heading_skeleton}`}></div>
 						<div className={`${$.paragraph_skeleton}`}></div>
 					</div>
-					<div className={`${$.loader}`}>
+					<div className={`${$.loader} ${loader ? '' : $.normalise_loader}`}>
 						<div className={`${$.loading_square}`}></div>
 						<div className={`${$.loading_square}`}></div>
 					</div>
