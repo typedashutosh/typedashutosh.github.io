@@ -12,13 +12,13 @@ section.Skill_section
     grid-template-columns: 2fr 2fr 2fr
     grid-template-rows: 0.1fr 2fr
     grid-template-areas: "taskbar taskbar taskbar" "sidebar screen screen"
-    height: 60vh
+    height: 80vh
     gap: 0px 0px
     border-radius: 6px
     overflow: hidden
     box-shadow: 0 2px 6px $color3
     background: linear-gradient(135deg, rgba(#5ea4ff,0.5), rgba(#ff66bf,0.5))
-    backdrop-filter: blur(10px)
+    backdrop-filter: blur(5px)
     .heading
       padding: 0.25rem 0.5rem
       grid-area: taskbar
@@ -56,30 +56,50 @@ section.Skill_section
         font-size: $font-sm
 
       label.formField
+        position: relative
         display: flex
         align-items: baseline
-        padding: 0.5rem 1rem 0.5rem 0.25rem
+        padding: 0
+        margin: 3px 0
         font-size: 1rem
         width: 100%
         background: linear-gradient(90deg, rgba(#ffa4dc, 0.75) 0%, rgba(#a0f5ee, 0.1) 50%, rgba(#a4b9ff, 0.25) 100%)
         background-size: 300%
         background-position: 100%
         transition: $transition5
+        &::before
+          background: linear-gradient(90deg, rgba(#80ffff, 0.5) 0%, rgba(#ff85d0, 0.5) 50%, rgba(#616cff, 0.5)100%)
+          background-size: 200%
+          background-position: left
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          height: 3px
+          width: 100%
+          margin: 0
+          padding: 0
+          transform: translateY(3px)
+          transition: $transition3
+          z-index: -1
+        &:hover::before
+          background-position: right
         &:hover
           background-position: 0%
         input
-          padding: 0 0.125rem
+          margin-left: 1rem
+          padding: 0.5rem 0.125rem
         div
           display: inline
           width: fit-content
           white-space: nowrap
-          padding: 0 0 0 0.5rem
+          padding: 0.5rem
     .screen
       grid-area: screen
       display: flex
-      // flex-direction: column
-      // align-items: center
-      justify-content: space-evenly
+      flex-direction: column
+      align-items: center
+      justify-content: start
       .card
         height: 180px
         width: 90%
@@ -120,7 +140,7 @@ section.Skill_section
           animation-iteration-count: infinite
         .heading_skeleton
           place-self: center start
-          height: 1.25rem
+          height: 1rem
           width: 90%
           background: linear-gradient(90deg, rgba($grey, 0.5) 0%,rgba($grey, 0.5) 30%, rgba($grey, 1) 50%,rgba($grey, 0.5) 70%, rgba($grey, 0.5) 100%)
           background-size: 300%
@@ -145,6 +165,30 @@ section.Skill_section
         &:hover
           box-shadow: 0 2px 4px rgba(#16404e, 0.25)
           transform: translateY(-4px)
+      .loader
+        margin: 1rem
+        height: 6rem
+        width: 6rem
+        background: transparent
+        position: relative
+        perspective: 200px
+        .loading_square
+          position: absolute
+          top: 0
+          left: 0
+          height: 3rem
+          width: 3rem
+          background: #b3f5fd
+          transform-style: preserve-3d
+          animation-name: loader-loading
+          animation-duration: 2s
+          animation-timing-function: linear
+          animation-iteration-count: infinite
+          transform-origin: right bottom
+          &:last-child
+            animation-delay: 1s
+            opacity: 0.75
+
 @keyframes loading-skeleton
   0%
     background-position: 100%
@@ -152,3 +196,15 @@ section.Skill_section
     background-position: 50%
   100%
     background-position: 0%
+
+@keyframes loader-loading
+  0%
+    transform: rotateX(0) rotateY(0)
+  25%
+    transform: rotateX(0) rotateY(180deg)
+  50%
+    transform: rotateX(180deg) rotateY(180deg)
+  75%
+    transform: rotateX(180deg) rotateY(0)
+  100%
+    transform: rotateX(0) rotateY(0)

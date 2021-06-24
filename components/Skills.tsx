@@ -58,6 +58,16 @@ const Skills: FC<ISkills> = (): ReactElement => {
 						<div className={`${$.heading_skeleton}`}></div>
 						<div className={`${$.paragraph_skeleton}`}></div>
 					</div>
+					<div className={`${$.card}`}>
+						<div className={`${$.avatar_skeleton}`}></div>
+						<div className={`${$.title_skeleton}`}></div>
+						<div className={`${$.heading_skeleton}`}></div>
+						<div className={`${$.paragraph_skeleton}`}></div>
+					</div>
+					<div className={`${$.loader}`}>
+						<div className={`${$.loading_square}`}></div>
+						<div className={`${$.loading_square}`}></div>
+					</div>
 				</div>
 			</div>
 		</section>
