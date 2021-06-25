@@ -1,0 +1,35 @@
+{
+	"name": "typedashutosh.github.io",
+	"version": "1.0.0",
+	"description": "Personal Portfolio site",
+	"main": "index.js",
+	"scripts": {
+		"dev": "next dev -p 5500",
+		"build": "next build",
+		"start": "next start -p 5500"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/typedashutosh/typedashutosh.github.io.git"
+	},
+	"keywords": [
+		"typedashutosh"
+	],
+	"author": "typedashutosh",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/typedashutosh/typedashutosh.github.io/issues"
+	},
+	"homepage": "https://github.com/typedashutosh/typedashutosh.github.io#readme",
+	"dependencies": {
+		"next": "^11.0.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"sass": "^1.35.1"
+	},
+	"devDependencies": {
+		"@types/node": "^15.12.4",
+		"@types/react": "^17.0.11",
+		"typescript": "^4.3.4"
+	}
+}
