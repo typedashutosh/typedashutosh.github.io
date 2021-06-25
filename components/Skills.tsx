@@ -12,15 +12,20 @@ const Skills: FC<ISkills> = (): ReactElement => {
 	const [loader, setLoader] = useState(true)
 
 	return (
-		<section className={`${$.Skill_section}`}>
-			<div className={`${css ? $.Skills : ''} ${glassmorphism ? '' : $.normalise_glassmorphism}`}>
+		<section id='skills'
+		className={`${css ? $.Skill_section : ''}`}>
+			<div className={`${$.Skills} ${glassmorphism ? '' : $.normalise_glassmorphism}`}>
 				<div className={`${$.heading}`}>
 					<div className={`${$.dot_1}`}></div>
 					<div className={`${$.dot_2}`}></div>
 					<div className={`${$.dot_3}`}></div>
 					<div className={`${$.title}`}>My Skills</div>
 				</div>
-				<div className={`${$.skills_checks} ${grdntBrdr? '': $.normalise_grdntBrdr} ${grdntBckgrnd? '': $.normalise_grdntBckgrnd}`}>
+				<div
+					className={`${$.skills_checks} ${grdntBrdr ? '' : $.normalise_grdntBrdr} ${
+						grdntBckgrnd ? '' : $.normalise_grdntBckgrnd
+					}`}
+				>
 					<div className={`${$.title}`}>Skills checklist</div>
 					<label htmlFor='CSS' className={`${$.formField}`}>
 						<input

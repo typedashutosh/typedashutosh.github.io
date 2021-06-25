@@ -1,0 +1,39 @@
+@import ../variables
+
+div.hero
+  display: flex
+  // position: relative
+  flex-direction: row
+  place-items: center
+  padding: 5% 10%
+  background: $color1
+  min-height: 60vh
+  div.main
+    .btn
+      display: flex
+      .skills_btn
+        background: $color3
+        &:hover
+          color: $color2
+          background: $color1
+          border-color: $color2
+      .project_btn
+        background: $color1
+        color: $color2
+        border-bottom-color: $color2
+        &:hover
+          color: $color1
+          background: $color3
+          border-color: $color3
+
+    div.headline
+      font-size: 2rem
+      color: $color2
+      max-width: 40rem
+  div.blob
+    position: absolute
+    right: 10%
+    pre
+      color: rgba(#61a0ff, 0.25)
+
+  

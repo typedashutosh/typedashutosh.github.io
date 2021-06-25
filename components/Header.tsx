@@ -29,13 +29,13 @@ const Header: FC<IHeader> = (): ReactElement => {
 				<div className={`${$.slice} mouse-click-ignore`}></div>
 			</div>
 			<nav className={`${$.nav} ${menuOpen ? $.nav_open : ''} mouse-click-ignore`}>
-				<Link href='#'>
+				<Link href='#hero'>
 					<div className='mouse-click-ignore'>Home</div>
 				</Link>
 				<Link href='#'>
 					<div className='mouse-click-ignore'>About me</div>
 				</Link>
-				<Link href='#'>
+				<Link href='#skills'>
 					<div className='mouse-click-ignore'>Skills</div>
 				</Link>
 				<Link href='#'>
