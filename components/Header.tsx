@@ -16,36 +16,38 @@ const Header: FC<IHeader> = (): ReactElement => {
 		}
 	} else null
 	return (
-		<header className={`${$.header}`}>
-			<div className={`${$.title}`}>typedashutosh</div>
-			<div
-				className={`${$.menu_btn} ${menuOpen ? $.menu_open : ''} mouse-click-ignore`}
-				onClick={() => {
-					setMenuOpen(!menuOpen)
-				}}
-			>
-				<div className={`${$.slice} mouse-click-ignore`}></div>
-				<div className={`${$.slice} mouse-click-ignore`}></div>
-				<div className={`${$.slice} mouse-click-ignore`}></div>
-			</div>
+		<div className={`${$.root}`}>
+			<header className={`${$.header}`}>
+				<div className={`${$.title}`}>typedashutosh</div>
+				<div
+					className={`${$.menu_btn} ${menuOpen ? $.menu_open : ''} mouse-click-ignore`}
+					onClick={() => {
+						setMenuOpen(!menuOpen)
+					}}
+				>
+					<div className={`${$.slice} mouse-click-ignore`}></div>
+					<div className={`${$.slice} mouse-click-ignore`}></div>
+					<div className={`${$.slice} mouse-click-ignore`}></div>
+				</div>
+			</header>
 			<nav className={`${$.nav} ${menuOpen ? $.nav_open : ''} mouse-click-ignore`}>
 				<Link href='#hero'>
-					<div className='mouse-click-ignore'>Home</div>
+					<div>Home</div>
 				</Link>
 				<Link href='#'>
-					<div className='mouse-click-ignore'>About me</div>
+					<div>About me</div>
 				</Link>
 				<Link href='#skills'>
-					<div className='mouse-click-ignore'>Skills</div>
+					<div>Skills</div>
 				</Link>
 				<Link href='#'>
-					<div className='mouse-click-ignore'>projects</div>
+					<div>projects</div>
 				</Link>
 				<Link href='#'>
-					<div className='mouse-click-ignore'>Contact</div>
+					<div>Contact</div>
 				</Link>
 			</nav>
-		</header>
+		</div>
 	)
 }
 
