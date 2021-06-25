@@ -1,0 +1,43 @@
+@import ../variables
+
+section.hero
+  display: flex
+  // position: relative
+  flex-direction: row
+  place-items: center
+  background: $color1
+  min-height: 60vh
+  div.main
+    .btn
+      display: flex
+      margin: 1rem
+      margin-left: 0
+      .skills_btn
+        background: $color3
+        &:hover
+          color: $color2
+          background: $color1
+          border-color: $color2
+      .project_btn
+        background: $color1
+        color: $color2
+        border-bottom-color: $color2
+        &:hover
+          color: $color1
+          background: $color3
+          border-color: $color3
+    div.headline
+      font-size: 2rem
+      color: $color2
+      max-width: 40rem
+      b
+        color: $color3
+  div.blob
+    position: absolute
+    right: 10%
+    pre
+      color: rgba(#61a0ff, 0.5)
+@media screen and ( max-width: 1080px )
+  section.hero
+    div.blob
+      display: none

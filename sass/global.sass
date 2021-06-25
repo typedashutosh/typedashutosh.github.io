@@ -12,23 +12,28 @@
     cursor: pointer
 
 html
-  overflow: hidden scroll
+  width: 100vw
   scroll-behavior: smooth
 
 body
   background-color: $color2
-  overflow: hidden
-  position: relative
+  overflow-x: hidden
 
 section
-  padding: 0 10%
+  padding: 10% 10%
   overflow: hidden
 
 .container
   padding: 0 10%
 
-.h1
-  font-size: 2rem
+.btn
+  font-size: 1.125rem
+  padding: 0.25rem 0.75rem
+  margin: 1rem
+  margin-left: 0
+  border: 2px solid transparent
+  width: fit-content
+  cursor: pointer
 
 @media screen and ( max-width: 720px )
   .container

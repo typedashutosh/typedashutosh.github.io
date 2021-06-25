@@ -1,27 +1,29 @@
 @import ../variables
 
 .header
-  position: relative
+  position: sticky
+  top: 0
   display: flex
   align-items: center
+  justify-content: space-between
   background: $color3
   height: 4.5rem
   width: 100%
-  justify-content: space-between
   padding: 1rem 5%
   box-shadow: 0 2px 4px $color3
+  z-index: 10
   .title
     font-size: 1.5rem
   .menu_btn
     position: relative
     height: fit-content
     width: 100px
-    zoom: 0.4
     display: flex
     flex-direction: column
     align-items: center
     cursor: pointer
     justify-content: center
+    transform: scale(0.4)
     .slice
       pointer-events: none
       height: 15px
@@ -76,8 +78,7 @@
     transition: $transition2
     box-shadow: -2px 2px 4px $color3
     backdrop-filter: blur(2px)
-    background: rgba($color3,.75)
-    z-index: 10
+    background: rgba($color3, 0.75)
     div
       cursor: pointer
       margin: 0.25rem 1rem 0.25rem 0.5rem

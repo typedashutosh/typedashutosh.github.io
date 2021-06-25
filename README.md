@@ -19,5 +19,7 @@
 <img src="public/assets/icons/json.svg" alt="json" height="36px"/>
 <img src="public/assets/icons/vercel.svg" alt="vercel" height="36px"/>
 </div>
-<div><img src="https://github-readme-stats.vercel.app/api?username=typedashutosh&count_private=true&show_icons=true&hide_border=false&include_all_commits=true&custom_title=Github%20%stats" width="360"></div>
-<div><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=typedashutosh&langs_count=10&layout=compact&theme=default" width="360"></div>
+
+![overview](https://github.com/typedashutosh/github-readme-stats/blob/master/generated/overview.svg)
+
+![languages](https://github.com/typedashutosh/github-readme-stats/blob/master/generated/languages.svg)
