@@ -1,4 +1,5 @@
-import { FC, ReactElement, useState } from 'react'
+import { FC, ReactElement, useEffect, useState } from 'react'
+import { isClient } from '../libs/stateCheck'
 import $ from '../sass/components/Skills.module.sass'
 
 interface ISkills {}
@@ -10,10 +11,9 @@ const Skills: FC<ISkills> = (): ReactElement => {
 	const [grdntBrdr, setGrdntBrdr] = useState(true)
 	const [grdntBckgrnd, setGrdntBckgrnd] = useState(true)
 	const [loader, setLoader] = useState(true)
-
 	return (
-		<section id='skills'
-		className={`${css ? $.Skill_section : ''}`}>
+		<section id='skills' className={`${css ? $.Skill_section : ''}`}>
+			<div className={`${$.page_title}`}>Skills</div>
 			<div className={`${$.Skills} ${glassmorphism ? '' : $.normalise_glassmorphism}`}>
 				<div className={`${$.heading}`}>
 					<div className={`${$.dot_1}`}></div>
