@@ -5,4 +5,6 @@ Currently, I use Nextjs, Typescript and Material-UI to accomplish the tasks. For
 
 resourses that can be used
 
-https://gittrophy.com/?entity=typedashutosh&year=2021
+https://gittrophy.com/?entity=typedashutosh&year=20
+21
+to read https://dev.to/jameswallis/deploying-a-next-js-app-to-github-pages-24pn
