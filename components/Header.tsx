@@ -19,6 +19,23 @@ const Header: FC<IHeader> = (): ReactElement => {
 		<div className={`${$.root}`}>
 			<header className={`${$.header}`}>
 				<div className={`${$.title}`}>typedashutosh</div>
+				<nav className={`${$.nav} ${menuOpen ? $.nav_open : ''} mouse-click-ignore`}>
+					<Link href='#hero'>
+						<div>Home</div>
+					</Link>
+					<Link href='#'>
+						<div>About me</div>
+					</Link>
+					<Link href='#skills'>
+						<div>Skills</div>
+					</Link>
+					<Link href='#'>
+						<div>projects</div>
+					</Link>
+					<Link href='#'>
+						<div>Contact</div>
+					</Link>
+				</nav>
 				<div
 					className={`${$.menu_btn} ${menuOpen ? $.menu_open : ''} mouse-click-ignore`}
 					onClick={() => {
@@ -30,23 +47,6 @@ const Header: FC<IHeader> = (): ReactElement => {
 					<div className={`${$.slice} mouse-click-ignore`}></div>
 				</div>
 			</header>
-			<nav className={`${$.nav} ${menuOpen ? $.nav_open : ''} mouse-click-ignore`}>
-				<Link href='#hero'>
-					<div>Home</div>
-				</Link>
-				<Link href='#'>
-					<div>About me</div>
-				</Link>
-				<Link href='#skills'>
-					<div>Skills</div>
-				</Link>
-				<Link href='#'>
-					<div>projects</div>
-				</Link>
-				<Link href='#'>
-					<div>Contact</div>
-				</Link>
-			</nav>
 		</div>
 	)
 }

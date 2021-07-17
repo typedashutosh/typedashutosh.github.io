@@ -2,8 +2,8 @@
 div.root
   overflow-x: hidden
   width: 100%
-  .header
-    position: fixed
+  header.header
+    position: sticky
     top: 0
     left: 0
     display: flex
@@ -61,6 +61,31 @@ div.root
           background-position: right center
           &:nth-child(3)
             background-position: left center
+    nav.nav
+      position: fixed
+      top: 4.5rem
+      right: 0
+      padding: 0.5rem 1rem 0.5rem 0.25rem
+      opacity: 0
+      transform: translateX(100%)
+      display: flex
+      flex-direction: column
+      transition: $transition2
+      box-shadow: -2px 2px 4px $color3
+      backdrop-filter: blur(3px)
+      background: rgba($color3, 0.875)
+      z-index: 10
+      div
+        cursor: pointer
+        margin: 0.25rem 1rem 0.25rem 0.5rem
+        padding: 0.5rem 1rem 0.5rem 0.5rem
+        transition: $transition2
+        border: 2px solid transparent
+        &:hover
+          border-bottom-color: $color1
+      &.nav_open
+        opacity: 1
+        transform: translateX(0%)
     .menu_open
       .slice
         color: red
@@ -69,28 +94,22 @@ div.root
           transform: translateX(0px) translateY(0px) rotateZ(-45deg)
         &:nth-child(3)
           transform: translateX(-0px) translateY(-25px) rotateZ(45deg)
-  .nav
-    position: fixed
-    top: 4.5rem
-    right: 0
-    padding: 0.5rem 1rem 0.5rem 0.25rem
-    opacity: 0
-    transform: translateX(100%)
-    display: flex
-    flex-direction: column
-    transition: $transition2
-    box-shadow: -2px 2px 4px $color3
-    backdrop-filter: blur(2px)
-    background: rgba($color3, 0.75)
-    z-index: 10
-    div
-      cursor: pointer
-      margin: 0.25rem 1rem 0.25rem 0.5rem
-      padding: 0.5rem 1rem 0.5rem 0.5rem
-      transition: $transition2
-      border: 2px solid transparent
-      &:hover
-        border-bottom-color: $color1
-    &.nav_open
-      opacity: 1
-      transform: translateX(0%)
+
+@media screen and ( min-width: 760px )
+  div.root
+    header.header
+      .menu_btn
+        display: none
+      nav.nav
+        all: unset
+        width: fit-content
+        div
+          all: unset
+          padding: 0.25rem 0.5rem
+          margin: 0 0.25rem
+          display: inline
+          transition: $transition2
+          border: 2px solid transparent
+          cursor: pointer
+          &:hover
+            border-bottom-color: $color1
