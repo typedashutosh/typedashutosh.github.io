@@ -1,16 +1,15 @@
-import { FC, ReactElement } from 'react'
-import Footer from './Footer'
-import Header from './Header'
-import $ from '../sass/components/Layout.module.sass'
+import React, { FC, ReactElement } from 'react'
+import { Footer } from './Footer'
+import { Header } from './Header'
 
 interface ILayout {}
 
 const Layout: FC<ILayout> = ({ children }): ReactElement => {
 	return (
-		<div className={`${$.Layout}`}>
+		<div className='container'>
 			<Header />
-			<div className={`${$.children}`}>{children}</div>
-			<Footer />
+			{children}
+			<Footer title='typedashutosh' />
 		</div>
 	)
 }
