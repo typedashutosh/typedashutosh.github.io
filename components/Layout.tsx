@@ -4,7 +4,7 @@ import { Header } from './Header'
 
 interface ILayout {}
 
-const Layout: FC<ILayout> = ({ children }): ReactElement => {
+export const Layout: FC<ILayout> = ({ children }): ReactElement => {
 	return (
 		<div className='container'>
 			<Header />
@@ -13,5 +13,3 @@ const Layout: FC<ILayout> = ({ children }): ReactElement => {
 		</div>
 	)
 }
-
-export default Layout

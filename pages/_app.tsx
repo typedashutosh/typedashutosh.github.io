@@ -1,7 +1,8 @@
 import React, { FC, ReactElement, useEffect } from 'react'
 import { AppProps } from 'next/app'
 import '../sass/globals.css'
-import Layout from '../components/Layout'
+import { Layout } from '../components/Layout'
+
 
 const _app: FC<AppProps> = ({ Component, pageProps }): ReactElement => {
 	//- Tailwind Dark Theme
