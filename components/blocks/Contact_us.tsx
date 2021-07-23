@@ -1,18 +1,22 @@
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, ReactNode } from 'react'
 
-interface IContact_us {}
+interface IContact_us {
+	title: ReactNode
+	subtitle: ReactNode
+}
 
-export const Contact_us: FC<IContact_us> = (): ReactElement => {
+export const Contact_us: FC<IContact_us> = ({ title, subtitle }): ReactElement => {
 	return (
 		<section id='contact' className='text-gray-600 body-font relative'>
 			<div className='container px-5 py-24 mx-auto'>
 				<div className='flex flex-col text-center w-full mb-12'>
 					<h1 className='sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900'>
-						Contact Us
+						{title}
 					</h1>
-					<p className='lg:w-2/3 mx-auto leading-relaxed text-base'>
-						Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.
-					</p>
+					<p className='lg:w-2/3 mx-auto leading-relaxed text-base'>{subtitle}</p>
+					<div className='flex mt-6 justify-center'>
+						<div className='w-16 h-1 rounded-full bg-indigo-500 inline-flex'></div>
+					</div>
 				</div>
 				<div className='lg:w-1/2 md:w-2/3 mx-auto'>
 					<div className='flex flex-wrap -m-2'>
@@ -59,7 +63,7 @@ export const Contact_us: FC<IContact_us> = (): ReactElement => {
 								Button
 							</button>
 						</div>
-						<div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
+						{/* <div className='p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center'>
 							<a className='text-indigo-500'>example@email.com</a>
 							<p className='leading-normal my-5'>
 								49 Smith St.
@@ -118,7 +122,7 @@ export const Contact_us: FC<IContact_us> = (): ReactElement => {
 									</svg>
 								</a>
 							</span>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</div>

@@ -1,18 +1,22 @@
-import { FC, ReactElement } from 'react'
+import { FC, ReactElement, ReactNode } from 'react'
 
-interface ITestimonial {}
+interface ITestimonial {
+	title: ReactNode
+	subtitle: ReactNode
+}
 
-export const Reviews: FC<ITestimonial> = (): ReactElement => {
+export const Reviews: FC<ITestimonial> = ({ title, subtitle }): ReactElement => {
 	return (
 		<section id='reviews' className='text-gray-600 body-font'>
 			<div className='container px-5 py-24 mx-auto'>
 				<div className='flex flex-col text-center w-full mb-20'>
 					<h1 className='sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900'>
-						Testimonials
+						{title}
 					</h1>
-					<p className='lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500'>
-						Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
-					</p>
+					<p className='lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500'>{subtitle}</p>
+					{/* <div className='flex mt-6 justify-center'>
+						<div className='w-16 h-1 rounded-full bg-indigo-500 inline-flex'></div>
+					</div> */}
 				</div>
 				<div className='flex flex-wrap -m-4'>
 					<ReviewsCard />
@@ -24,9 +28,9 @@ export const Reviews: FC<ITestimonial> = (): ReactElement => {
 	)
 }
 
-interface ITestimonial {}
+interface IReviewCard {}
 
-export const ReviewsCard: FC<ITestimonial> = (): ReactElement => {
+export const ReviewsCard: FC<IReviewCard> = (): ReactElement => {
 	return (
 		<div className='lg:w-1/3 lg:mb-0 mb-6 p-4'>
 			<div className='h-full text-center'>
