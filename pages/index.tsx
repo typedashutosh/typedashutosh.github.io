@@ -45,6 +45,7 @@ const Home: FC<IHome> = (): ReactElement => {
 					href: '#contact'
 				}}
 			/>
+			<hr  />
 			<About
 				title='About me'
 				subtitle={
@@ -58,6 +59,7 @@ const Home: FC<IHome> = (): ReactElement => {
 				}
 				stats={statsState}
 			/>
+			<hr  />
 			<Services
 				title={<>Services offered</>}
 				services={[
@@ -138,12 +140,49 @@ const Home: FC<IHome> = (): ReactElement => {
 					}
 				]}
 			/>
-			<Project />
+			<hr  />
+			<Project
+				title={<>Projects</>}
+				subtitle={
+					<>
+						To Showcase my skills and give you an idea of what you'll get, I've created several
+						projects. Watch these projects to conclude what exactly you want. I've used NextJS,
+						TailwindCSS to create these projects. Which is then hosted at Vercel.
+					</>
+				}
+				projects={[
+					{
+						img:'https://dummyimage.com/720x400',
+						title: 'Sample Project',
+						subtitle: 'Subtitle',
+						desc: `Nothing to show here. We'll update as soon as possible...`
+					},{
+						img:'https://dummyimage.com/720x400',
+						title: 'Sample Project',
+						subtitle: 'Subtitle',
+						desc: `Nothing to show here. We'll update as soon as possible...`
+					},{
+						img:'https://dummyimage.com/720x400',
+						title: 'Sample Project',
+						subtitle: 'Subtitle',
+						desc: `Nothing to show here. We'll update as soon as possible...`
+					},{
+						img:'https://dummyimage.com/720x400',
+						title: 'Sample Project',
+						subtitle: 'Subtitle',
+						desc: `Nothing to show here. We'll update as soon as possible...`
+					},
+				]}
+			/>
+
+			<hr  />
 			<Pricing />
+			<hr  />
 			<Reviews
 				title={<>Testimonials</>}
 				subtitle={<>What does our customers say about our works</>}
 			/>
+			<hr  />
 
 			<Contact_us
 				title={<>Contact us</>}
