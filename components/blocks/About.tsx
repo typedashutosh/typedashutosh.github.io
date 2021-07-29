@@ -44,7 +44,7 @@ const StatsCard: FC<IStatsCard> = ({ title, value }): ReactElement => {
 
 	return (
 		<>
-			<div className='p-4 sm:w-1/2 lg:w-1/4 w-1/2'>
+			<div className='p-4 sm:w-1/2 lg:w-1/4 w-1/2 px-2'>
 				<h2 className='title-font font-medium text-3xl text-gray-900 text-center'>{value}</h2>
 				<p className='leading-relaxed text-center'>{title}</p>
 			</div>
